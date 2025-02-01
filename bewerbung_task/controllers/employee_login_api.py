@@ -9,8 +9,9 @@ from frappe.utils.csvutils import to_csv
 def init_mail_user_login_hsitory():
 	try: 
 		data = get_user_data()
-		xlsx_data = init_csv_file(data)
-		save_and_send_file(xlsx_data,'user_history_login')
+		if data:
+			xlsx_data = init_csv_file(data)
+			save_and_send_file(xlsx_data,'user_history_login')
 	except Exception:
 		frappe.log_error(frappe.get_traceback(), _("init_mail_user"))
 
