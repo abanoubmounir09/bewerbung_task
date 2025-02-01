@@ -148,23 +148,24 @@ app_license = "mit"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"bewerbung_task.tasks.all"
-# 	],
-# 	"daily": [
-# 		"bewerbung_task.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"bewerbung_task.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"bewerbung_task.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"bewerbung_task.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+	# "all": [
+	# 	"bewerbung_task.tasks.all"
+	# ],
+	"daily": [
+		"bewerbung_task.controllers.employee_login_api.init_mail_user_login_hsitory"
+	]
+    # ,
+	# "hourly": [
+	# 	"bewerbung_task.tasks.hourly"
+	# ],
+	# "weekly": [
+	# 	"bewerbung_task.tasks.weekly"
+	# ],
+	# "monthly": [
+	# 	"bewerbung_task.tasks.monthly"
+	# ],
+}
 
 # Testing
 # -------
